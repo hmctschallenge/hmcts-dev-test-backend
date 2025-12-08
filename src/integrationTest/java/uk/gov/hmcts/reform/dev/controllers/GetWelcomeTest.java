@@ -7,6 +7,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import uk.gov.hmcts.reform.dev.repositories.CaseRepository;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -16,6 +19,9 @@ class GetWelcomeTest {
 
     @Autowired
     private transient MockMvc mockMvc;
+
+    @MockitoBean
+    private CaseRepository caseRepository;
 
     @DisplayName("Should welcome upon root request with 200 response code")
     @Test
