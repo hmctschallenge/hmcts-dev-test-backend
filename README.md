@@ -13,7 +13,7 @@ wish.
 To run the backend, first run `docker compose up -d` to create the postgres database defined in docker-compose.yml,
 then run `./gradlew bootrun` to start the main spring boot application.
 
-The application runs on http://localhost:8080
+The application runs on http://localhost:4000
 
 ### Endpoints
 
